@@ -1,5 +1,11 @@
+# Backup files
+*.bak
+
 # Output library directory
 /src/lib/
+
+# Credentials (Microsoft Azure Translate API Key)
+/src/Credentials.ps1
 
 ## Ignore Visual Studio settings files and build results
 
