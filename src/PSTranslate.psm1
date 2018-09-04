@@ -62,7 +62,7 @@ function Get-Language {
         )
         $RequestBody = ConvertTo-Json $Content
         
-        $Response = Invoke-WebRequest -URI $RequestURI -Body $RequestBody -ContentType 'application/json' `
+        $Response = Invoke-WebRequest -URI $RequestURI -Body $RequestBody -ContentType 'application/json; charset=utf-8' `
             -Method 'Post' -Headers @{ 'Ocp-Apim-Subscription-Key' = $Global:PSAzureTranslateApiKey }
         $Response.Content | ConvertFrom-Json
     } catch {
@@ -92,7 +92,7 @@ function Get-Translation {
         )
         $RequestBody = ConvertTo-Json $Content
         
-        $Response = Invoke-WebRequest -URI $RequestURI -Body $RequestBody -ContentType 'application/json' `
+        $Response = Invoke-WebRequest -URI $RequestURI -Body $RequestBody -ContentType 'application/json; charset=utf-8' `
             -Method 'Post' -Headers @{ 'Ocp-Apim-Subscription-Key' = $Global:PSAzureTranslateApiKey }
         $Response.Content | ConvertFrom-Json
     } catch {
